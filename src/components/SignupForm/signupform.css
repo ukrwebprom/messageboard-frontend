@@ -1,0 +1,12 @@
+.signup-form {
+    width:100%;
+    max-width:350px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.signup-form input {
+    border-radius: 0px;
+    border: 1px solid #333;
+    padding:10px 5px;
+}
