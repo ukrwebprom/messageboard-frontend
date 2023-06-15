@@ -8,22 +8,23 @@ import { SignUp } from './pages/SignUp';
 import { VerifyEmail } from './pages/VerifyEmail';
 import { UserSettings } from './pages/UserSettings';
 import { Application } from './pages/Application';
+import { Intro } from './pages/Intro';
 
 function App() {
 
   return (
     <div className='mainscreen'>
       <Routes>
-        <Route path='/' element={<Application />} />
-{/*         <Route path='/' element={<PrivateRoute />}>
+        <Route path='/intro' element={<Intro />} />
+        <Route path='/' element={<PrivateRoute />}>
+          <Route index element={<Application />} />
           <Route path='user/settings' element={<UserSettings />} />
         </Route>
         <Route path='/user' element={<PublicRoute />}>
-          
           <Route path='signin' element={<SignIn/>} />
           <Route path='signup' element={<SignUp/>} />
           <Route path='verify/:verificationToken' element={<VerifyEmail />} />
-        </Route> */}
+        </Route>
       </Routes>
     </div>
   );

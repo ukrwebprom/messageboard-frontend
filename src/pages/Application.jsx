@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react'
 import LayoutA from "../components/Layouts/LayoutA";
 /* import { useGeolocation } from "@uidotdev/usehooks"; */
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-const GM_API_KEY = 'AIzaSyDLnQlza59GeNnBneUvnJkxC6FMVV_iD6Y';
 
 const containerStyle = {
     width: '100%',
@@ -40,7 +39,7 @@ export const Application = () => {
       }; */
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: GM_API_KEY
+        googleMapsApiKey: window.env.GM_API_KEY
       })
     
     const onLoad = React.useCallback(function callback(map) {

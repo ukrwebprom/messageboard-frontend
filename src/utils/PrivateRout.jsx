@@ -3,7 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 export const PrivateRoute = () => {
     const {isLoggedIn} = useUser();
-    return isLoggedIn? <Outlet/> : <Navigate to='/user/signin' />;
+    return isLoggedIn? <Outlet/> : <Navigate to='/intro' />;
 }
 
 export const PublicRoute = () => {
