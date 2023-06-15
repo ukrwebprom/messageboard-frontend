@@ -1,0 +1,12 @@
+{
+    "ru": {
+        "hi":"Привет",
+        "signup":"Регистрация",
+        "signupbtn":"Отправить"
+    },
+    "en": {
+        "hi":"Hello",
+        "signup":"Create a new user",
+        "signupbtn":"Sign up"
+    }
+}

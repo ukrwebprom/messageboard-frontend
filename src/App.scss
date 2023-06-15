@@ -1,0 +1,36 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.mainscreen {
+  background-image: url('./images/background-img.jpg');
+  background-size: cover;
+  height:100vh;
+}
+input {
+    background-color:transparent;
+    border: 1px solid white;
+    outline:none;
+    padding:10px 5px;
+    padding-left: 15px;
+    font-family: inherit;
+    font-size: 18px;
+    color:white;
+  &:focus {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+  &::placeholder {
+    font-size: 15px;
+    color: #999;
+  }
+}
+button {
+  padding:10px 15px;
+  font-family: inherit;
+  font-size: 18px;
+  width:fit-content;
+  font-weight: 600;
+  text-transform: uppercase;
+}

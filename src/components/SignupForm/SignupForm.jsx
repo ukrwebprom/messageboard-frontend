@@ -1,36 +1,31 @@
 import './signupform.css';
 import { useState } from 'react';
 import { signUp } from '../../serverAPI/serverAPI';
+import { EnterForm } from '../EnterForm/EnterForm';
+import { getMessage } from "../../utils/getMessage";
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
-export const SignupForm = () => {
-
-    const [serverResponse, setServerResponse] = useState('');
-
-    const onSubmit = async (e) => {
+export const SignupForm = (onSuccess) => {
+    const [isError, setIsError] = useState('');
+    const onSignUp = async (e) => {
         e.preventDefault();
-        const {name, email, password} = e.target.elements;
-        setServerResponse('Sending data');
+        const {email, password} = e.target.elements;
+
         try{
             const res = await signUp({
-                name:name.value,
                 email:email.value,
                 password:password.value
             });
-            setServerResponse(`New user: ${res.name} is created`);
+            onSuccess();
         } catch(err) {
-            setServerResponse(err.message);
-        }  
+            setIsError(err.message);
+        } 
     }
 
     return(
         <div>
-            <form className="signup-form" onSubmit={onSubmit}>
-                <input type="text" placeholder="username" name="name" />
-                <input type="text" placeholder="email" name="email" />
-                <input type="password" placeholder="password" name="password" />
-                <button type="submit">Sign up</button>
-            </form>
-            {serverResponse && <p>{serverResponse}</p>}
+            <EnterForm onSubmit={onSignUp} title={getMessage('signupbtn', 'ru')} />
+            {isError && <ErrorMessage mes={isError} />}
         </div>
     )
 }

@@ -1,0 +1,21 @@
+.global-container {
+  width: 100%;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  /*     flex-direction: column; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=mainlayout.css.map */

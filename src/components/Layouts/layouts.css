@@ -1,0 +1,25 @@
+.global-container {
+  width: 100%;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.global-container.b {
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}/*# sourceMappingURL=layouts.css.map */

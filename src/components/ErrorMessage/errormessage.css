@@ -1,0 +1,15 @@
+.errormessage {
+  display: flex;
+  color: red;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+.errormessage p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.errorplaceholder {
+  height: 40px;
+}/*# sourceMappingURL=errormessage.css.map */

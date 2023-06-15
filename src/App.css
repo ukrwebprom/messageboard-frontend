@@ -1,3 +1,44 @@
-.container {
-  padding:15px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
+
+.mainscreen {
+  background-image: url("./images/background-img.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  padding: 10px 5px;
+  padding-left: 15px;
+  font-family: inherit;
+  font-size: 18px;
+  color: white;
+}
+input:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+input::-moz-placeholder {
+  font-size: 15px;
+  color: #999;
+}
+input::placeholder {
+  font-size: 15px;
+  color: #999;
+}
+
+button {
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  text-transform: uppercase;
+}/*# sourceMappingURL=App.css.map */

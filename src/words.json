@@ -1,0 +1,15 @@
+{
+    "adjective": ["pulcher", "vafer", "benignus", "fortis", "magnificus", "prudens", 
+    "pius", "sensibilis", "ingeniosus", "mitis", "venustus", "vehemens", "acer", "charismaticus", 
+    "creabilis", "elegans", "intellectualis", "confidens", "tenax", "eruditus", 
+    "inspirator", "promptus", "venereus", "peritus", "officiosus", "curans", "gratus", 
+    "athleticus", "activus", "decorus", "unicus", "independens", "nobilis", "exemplar", 
+    "sociale", "versatile", "jucundum", "venustum", "amicabile", "fidens", "sollers", "parcus"],
+    "noun": ["amor", "gaudium", "spes", "sapientia", "pulchritudo", "libertas", 
+    "harmonia", "somnium", "creatio", "passio", "amicitia", "fides", "fortuna", "iustitia",
+    "inspiratio", "vis", "energia", "risus", "silentium", "gratia", "clementia", "compassio",
+    "copia", "magia", "bonitas", "felicitas", "vita", "virtus", "misericordia", "caliditas",
+    "teneritas", "somniatio", "fiducia", "tranquillitas", "fortitudo", "patientia", "intuitio", 
+    "prosperitas", "abundantia", "perspicuitas", "transformatio", "requies", "integritas",
+    "tranquillitas animi", "sensus"]
+}

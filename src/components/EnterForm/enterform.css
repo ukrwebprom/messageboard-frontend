@@ -1,0 +1,13 @@
+.enter-form {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.enter-form-title {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 200;
+  font-size: 46px;
+}/*# sourceMappingURL=enterform.css.map */
