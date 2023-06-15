@@ -3,14 +3,14 @@ import LayoutA from "../components/Layouts/LayoutA";
 import { useUser } from "../utils/useUser";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-const MAP_API = 'AIzaSyDLnQlza59GeNnBneUvnJkxC6FMVV_iD6Y';
+/* const MAP_API = 'AIzaSyDLnQlza59GeNnBneUvnJkxC6FMVV_iD6Y'; */
 
 export const Intro = () => {
     const { myLocation, setLocation } = useUser();
     const [map, setMap] = useState(null);
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: MAP_API
+        googleMapsApiKey: process.env.MAP_API
       })
     
     const defaultCenter = {
