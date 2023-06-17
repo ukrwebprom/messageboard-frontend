@@ -3,11 +3,11 @@ import { EnterForm } from "../components/EnterForm/EnterForm"
 import { signIn } from "../serverAPI/serverAPI";
 import { useUser } from "../utils/useUser";
 import { Layouts } from "../components/Layouts/Layouts";
-
+import { useNavigate } from "react-router-dom";
 
 
 export const SignIn = () => {
-    const [serverResponse, setServerResponse] = useState('');
+    const navigate = useNavigate();
     const [isError, setIsError] = useState('');
     const {logIn} = useUser();
 
@@ -15,22 +15,20 @@ export const SignIn = () => {
         e.preventDefault();
         setIsError('');
         const {email, password} = e.target.elements;
-        setServerResponse('Sending data');
+
         try{
             const res = await signIn({
                 email:email.value,
                 password:password.value
             });
-            logIn(res.token);
-            setServerResponse('logged in');
+            logIn(res);
+            navigate("/", { replace: true });
         } catch(err) {
             setIsError(err.message);
         } 
     }
 
     return(
-        <Layouts>
-            <EnterForm onSubmit={onSignIn} title='Login' error={isError} btn='Sign In'/>
-        </Layouts>
+        <EnterForm onSubmit={onSignIn} title='Login' error={isError} btn='Sign In'/>
     )                       
 }

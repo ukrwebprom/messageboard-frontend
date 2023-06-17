@@ -2,11 +2,11 @@ import { useUser } from "./useUser"
 import { Navigate, Outlet } from "react-router-dom";
 
 export const PrivateRoute = () => {
-    const {isLoggedIn} = useUser();
-    return isLoggedIn? <Outlet/> : <Navigate to='/intro' />;
+    const {authToken} = useUser();
+    return authToken? <Outlet/> : <Navigate to='/intro' />;
 }
 
-export const PublicRoute = () => {
-    const {isLoggedIn} = useUser();
-    return isLoggedIn? <Navigate to='/' /> : <Outlet/>;
+export const RestrictedRoute = () => {
+    const {authToken} = useUser();
+    return authToken? <Navigate to='/' /> : <Outlet/>;
 }

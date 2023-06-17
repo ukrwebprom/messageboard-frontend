@@ -26,10 +26,19 @@ export const signUp = async (data) => {
 export const signIn = async (data) => {
     try {
         const res = await axios.post('/api/signin', data);
+        setAuthToken(res.data.token);
         return res.data;
     } catch(err) {
-        console.log(err);
-        throw new Error(err.message)
+        throw new Error(err.response.data.message)
+    }
+}
+
+export const logOut = async () => {
+    try {
+        const res = await axios.post('/api/logout');
+        return res.data;
+    } catch(err) {
+        throw new Error(err)
     }
 }
 
@@ -43,13 +52,14 @@ export const verify = async (token) => {
     }
 }
 
-export const checkToken = async (token) => {
+export const getMe = async (token) => {
     setAuthToken(token);
     try {
-        const res = await axios.get(`/api/auth`);
+        const res = await axios.get(`/api/me`);
+        setAuthToken(res.data.token);
         return res.data;
+
     } catch(err) {
-        console.log("Tocken check", err);
-        throw new Error(err.response.data.message)
+        return false;
     }
 }
