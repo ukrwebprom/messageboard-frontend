@@ -6,10 +6,10 @@ import UserMarker from '../../images/usericon.svg';
 
 
 export const Map = ({location}) => {
-
+    console.log(process.env.REACT_APP_GM_API_KEY );
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: process.env.MAP_API
+        googleMapsApiKey: process.env.REACT_APP_GM_API_KEY 
       })
     const markerClick = () => {
         console.log('click')
